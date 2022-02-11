@@ -1,0 +1,26 @@
+{
+  "name": "nilkanth-express",
+  "version": "1.0.0",
+  "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
+  "main": "jj.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nilkanteshwar/nilkanth-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nilkanteshwar/nilkanth-express/issues"
+  },
+  "homepage": "https://github.com/Nilkanteshwar/nilkanth-express#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-validator": "^6.14.0",
+    "mysql": "^2.18.1"
+  }
+}
