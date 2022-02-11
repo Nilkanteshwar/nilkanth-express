@@ -27,8 +27,8 @@ app.use(express.urlencoded({
 // *********************************
 var pool_con = mysql.createPool({
    host: "localhost",
-   user : "nilkant",
-   password : "Nil",
+   user : "root",
+   password : "",
    database : "nilkant",
 });
   
@@ -82,6 +82,12 @@ app.post("/user",(req, res) => {
     })
   }    
 
+})
+
+
+app.post("/login",(req,res)=>{
+  const {email ,password}=req.body;
+  console.log(email,password);
 })
 
 app.listen(port, () => {

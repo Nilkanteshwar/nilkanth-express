@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Login</title>
+
+  <link rel="icon" type="image/x-icon" href="https://faberinfinite.com/wp-content/uploads/2017/11/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<style type="text/css">
+     <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins";
+      }
+      body {
+
+
+        
+        background: linear-gradient(
+          270deg,
+          #fbaf00,
+          #ffd639,
+          #ffa3af,
+         /* #007cbe,*/
+          #00af54
+        );
+        background-size: 1000% 1000%;
+
+        -webkit-animation: lineargrad 30s ease infinite;
+        -moz-animation: lineargrad 30s ease infinite;
+        animation: lineargrad 30s ease infinite;
+      }
+      .jumbotron,
+      .card {
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(5px);
+      }
+
+      @-webkit-keyframes lineargrad {
+        0% {
+          background-position: 0% 51%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 51%;
+        }
+      }
+      @-moz-keyframes lineargrad {
+        0% {
+          background-position: 0% 51%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 51%;
+        }
+      }
+      @keyframes lineargrad {
+        0% {
+          background-position: 0% 51%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 51%;
+        }
+      }
+</style>
+<body class="bg-primary">
+<style>
+
+label#error_email {
+position: absolute;
+bottom: -27px;
+font-size: 12px;
+}
+
+.toggle-password {
+float: right;
+cursor: pointer;
+margin-right: 10px;
+margin-top: -25px;
+}
+
+</style>
+
+
+<div class="container mt-3">
+<div class="row">
+<div class="col-md-5 m-auto ">
+<div class="card p-4 mt-5">
+
+<div class="form-group text-center">
+<h1>Login Form</h1> 
+</div>
+
+    <form action="" method="post"  onsubmit="return validation()">
+
+    <div class="form-group">
+        <input type="email" name="email" placeholder="Email address" class="form-control" id="email" aria-describedby="emailHelp">
+        <span id="emai" class="text-danger"></span>
+        
+    </div>
+
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+            <span id="pass" class="text-danger"></span>
+        <i class="toggle-password fa fa-fw fa-eye-slash"></i>
+    </div>
+    
+    <div class="col-md-12 text-center">
+        <button type="submit" class="btn btn-primary d-inline-block">LOGIN</button>
+    </div>
+
+    <div class="pb-2 justify-content-between d-flex">
+        
+        <strong style="color: #020202;"><a href="s.php" class="text-primary"> Register</a></strong>
+    </div>
+
+    </form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+$(".toggle-password").click(function() {
+    $(this).toggleClass("fa-eye fa-eye-slash");
+    input = $(this).parent().find("input");
+    if (input.attr("type") == "password") {
+        input.attr("type", "text");
+    } else {
+        input.attr("type", "password");
+    }
+});
+           
+    function validation(){
+    var password = document.getElementById('password').value;
+    var email = document.getElementById('email').value;
+
+
+
+      if(email ==""){
+        document.getElementById('emai').innerHTML="please fill the username field";
+        return false;
+        }
+       
+        if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')) {
+        document.getElementById('emai').innerHTML="please fill correct email";
+        return false;
+        }
+
+        if(password ==""){
+        document.getElementById('pass').innerHTML="please fill the password";
+        return false;
+        }
+       
+        }
+</script>
+
+</body>
+</html>
